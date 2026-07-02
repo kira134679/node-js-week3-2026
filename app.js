@@ -21,6 +21,7 @@ app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 //   4. 把 membersRouter 掛載到 '/members' 路徑下
 app.use('/members', membersRouter);
 //   5. 把 uploadImageRouter 掛載到 '/uploadImage' 路徑下
+app.use('/uploadImage', uploadImageRouter);
 //
 // ✅ 未匹配的路由（如 GET /unknown）Express 預設會回 404，不需另外加 middleware
 //
