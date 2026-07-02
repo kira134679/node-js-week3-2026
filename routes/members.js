@@ -94,7 +94,7 @@ router.METHOD('PATH', (req, res) => { ... });
 router.post('/', (req, res) => {
   const result = validateBody(req.body);
   if (!result.valid) {
-    res.status(400).json(result.error);
+    res.status(400).json({ error: result.error });
     return;
   }
 
